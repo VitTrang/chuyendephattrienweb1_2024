@@ -10,6 +10,7 @@ if (!empty($_GET['keyword'])) {
     $params['keyword'] = $_GET['keyword'];
 }
 
+
 $users = $userModel->getUsers($params);
 ?>
 <!DOCTYPE html>
