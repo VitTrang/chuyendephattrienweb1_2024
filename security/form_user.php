@@ -5,13 +5,16 @@ require_once 'models/UserModel.php';
 $userModel = new UserModel();
 
 // Mã hóa và giải mã
-function encrypt($data, $key) {
+function encrypt($data, $key)
+
+{
     $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('aes-256-cbc'));
     $encrypted = openssl_encrypt($data, 'aes-256-cbc', $key, 0, $iv);
     return base64_encode($encrypted . '::' . $iv);
 }
 
-function decrypt($data, $key) {
+function decrypt($data, $key)
+{
     list($encrypted_data, $iv) = explode('::', base64_decode($data), 2);
     return openssl_decrypt($encrypted_data, 'aes-256-cbc', $key, 0, $iv);
 }
@@ -96,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="form-group">
                     <label for="name">Tên</label>
                     <input class="form-control" name="name" placeholder="Tên"
-                           value="<?php echo isset($user['name']) ? htmlspecialchars($user['name']) : ''; ?>">
+                        value="<?php echo isset($user['name']) ? htmlspecialchars($user['name']) : ''; ?>">
                 </div>
                 <div class="form-group">
                     <label for="password">Mật khẩu</label>
