@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; // Đặt lại margin và padding mặc định của tất cả các phần tử
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; // Sử dụng font chữ Arial và đặt màu nền cho trang web
+}
+
+.repair-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f3f3f3;
+    flex-direction: column; // Tạo phần chứa nội dung với flexbox
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-direction: row; // Phần chứa con sử dụng flexbox
+}
+
+.text-content {
+    max-width: 45%; // Đặt chiều rộng tối đa cho phần văn bản
+    h1 {
+        font-family: 'Arial', sans-serif;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 1.5;
+        color: #333333; // Cài đặt kiểu chữ cho tiêu đề h1
+    }
+}
+ .divider {
+    .logo {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    
+         hr {
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+            margin: 0 10px; // Khoảng cách giữa đường và biểu tượng
+            width: 40px; // Độ dài đường gạch ngang
+        }
+    
+        .icon {
+            padding: 0 10px;
+        }
+    }  
+    hr {
+        border: none;
+        height: 2px;
+        background-color: #ff5722;
+        width: 60px;
+    }
+}
+
+.text-content {
+    h3 {
+        color: #222222;
+        margin: 20px 0;
+        font-weight: bold;
+        font-size: 20px; // Cài đặt kiểu chữ cho tiêu đề h3
+    }
+
+    p {
+        color: #666;
+        line-height: 1.6;
+        text-align: justify;
+        font-size: 15px; // Định dạng cho đoạn văn bản
+    }
+}
+
+.info-boxes {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between; // Sắp xếp các hộp thông tin theo hàng ngang
+
+    .info-box {
+        margin-right: 30px;
+        text-align: left; // Tạo khoảng cách giữa các hộp thông tin
+
+        &:first-child {
+            margin-left: 0; // Xóa khoảng cách bên trái của hộp thông tin đầu tiên
+        }
+
+        &:last-child {
+            margin-right: 0; // Xóa khoảng cách bên phải của hộp thông tin cuối cùng
+        }
+
+        h2 {
+            font-size: 3em;
+            color: #333; // Cài đặt kiểu chữ lớn cho tiêu đề trong hộp thông tin
+        }
+
+        p {
+            color: #999;
+            line-height: 1; // Định dạng cho đoạn văn bản trong hộp thông tin
+        }
+    }
+}
+
+.image-content {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto; // Tạo phần chứa hình ảnh với kích thước cố định
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        opacity: 0; // Đặt tất cả hình ảnh ban đầu ẩn
+        transition: transform 0.3s ease;
+        animation: moveIn 5s ease forwards; // Sử dụng hoạt ảnh để di chuyển chúng vào vị trí
+
+        &:nth-child(1) {
+            z-index: 1;
+            animation-delay: -1s;
+            transform: translate(-50%, 0);
+        }
+
+        &:nth-child(2) {
+            z-index: 2;
+            animation-delay: -0.8s; // Thay đổi dấu phẩy thành dấu chấm
+            transform: translate(50px, 0);
+        }
+
+        &:nth-child(3) {
+            z-index: 3;
+            animation-delay: -0,6s;
+            transform: translate(0, -50px);
+        }
+
+        &:nth-child(4) {
+            z-index: 4;
+            animation-delay: -0.4s;
+            transform: translate(0, 50px);
+        }
+
+        &:nth-child(5) {
+            z-index: 5;
+            animation-delay: -0.2s;
+            transform: translate(-50px, 50px);
+        }
+
+        &:nth-child(6) {
+            z-index: 6;
+            animation-delay: 0s;
+            transform: translate(50px, 0);
+        }
+
+        &:nth-child(7) {
+            z-index: 7;
+            animation-delay: 0.2s;
+            transform: translate(-50px, 50px);
+        }
+
+        &:nth-child(8) {
+            z-index: 8;
+            animation-delay: 0.4s;
+            transform: translate(50px, 0);
+        }
+
+        &:nth-child(9) {
+            z-index: 9;
+            animation-delay: 0.6s;
+            transform: translate(-50px, 0);
+        }
+
+        &:nth-child(10) {
+            z-index: 10;
+            animation-delay: 0.8s;
+            transform: translate(-50px, 50px);
+        }
+
+        &:nth-child(11) {
+            z-index: 11;
+            animation-delay: 1s;
+            transform: translate(0, 50px);
+        }
+
+        &:nth-child(12) {
+            z-index: 12;
+            animation-delay: 1.2s;
+            transform: translate(0, 50px);
+        }
+
+        &:nth-child(13) {
+            z-index: 13;
+            animation-delay: 1.4s;
+            transform: translate(0, 50px);
+        }
+    }
+}
+
+@keyframes moveIn {
+    0% {
+        opacity: 0; // Bắt đầu từ không nhìn thấy
+    }
+
+    50% {
+        opacity: 1; // Hiện hình ảnh giữa hoạt ảnh
+    }
+
+    100% {
+        opacity: 1; // Giữ độ mờ 100% ở cuối
+        transform: translate(0, 0); // Vị trí cuối cùng
+    }
+}

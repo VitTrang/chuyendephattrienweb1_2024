@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+.repair-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #fff;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  flex-direction: row;
+}
+.faq-section {
+  max-width: 40%;
+}
+.faq-section h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 30px;
+  line-height: 3;
+  color: black;
+  font-weight: bold;
+}
+.faq-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.faq-section h3 {
+  background-color: #f9f9f9;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #000;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 2;
+}
+.faq-section h4 {
+  background-color: #f9f9f9;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 2;
+}
+.faq-section p {
+  padding: 10px;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  border-top: none;
+  margin: 0;
+  line-height: 2;
+}
+.input-content {
+  width: 40%;
+  padding: 40px;
+  margin-top: 90px;
+}
+.input-content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 3;
+}
+.input-content input,
+.input-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #000;
+  line-height: 1.5;
+}
+.input-content button {
+  padding: 10px 30px;
+  background-color: #7796b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.input-content button:hover {
+  background-color: #4a8;
+}

@@ -1,0 +1,121 @@
+// Biến cho màu sắc và kích thước
+@bg-color: #fff;
+@border-color: #000;
+@input-bg-color: rgb(119, 150, 180);
+@button-hover-bg-color: #4a8;
+
+// Reset các thuộc tính
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // Chiều cao toàn bộ trang
+    background-color: @bg-color;
+}
+
+.repair-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: @bg-color;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-direction: row;
+}
+
+.faq-section {
+    max-width: 40%;
+
+    h1 {
+        font-family: 'Arial', sans-serif;
+        font-size: 30px; // Kích thước chữ
+        line-height: 3; // Khoảng cách giữa các dòng
+        color: black; // Màu chữ
+        font-weight: bold;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    h3 {
+        background-color: #f9f9f9;
+        cursor: pointer;
+        padding: 10px;
+        margin: 0;
+        border: 1px solid @border-color;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 2;
+    }
+
+    h4 {
+        background-color: #f9f9f9;
+        cursor: pointer;
+        padding: 10px;
+        margin: 0;
+        border-bottom: 1px solid @border-color;
+        border-right: 1px solid @border-color;
+        border-left: 1px solid @border-color;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 2;
+    }
+
+    p {
+        padding: 10px;
+        border-right: 1px solid @border-color;
+        border-left: 1px solid @border-color;
+        border-top: none;
+        margin: 0;
+        line-height: 2;
+    }
+}
+
+.input-content {
+    width: 40%;
+    padding: 40px;
+    margin-top: 90px;
+
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 3;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 30px;
+        border: 1px solid @border-color;
+        line-height: 1.5;
+    }
+
+    button {
+        padding: 10px 30px;
+        background-color: @input-bg-color;
+        color: white;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: @button-hover-bg-color; // Đổi màu khi hover
+        }
+    }
+}

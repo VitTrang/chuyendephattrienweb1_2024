@@ -12,7 +12,6 @@ $url_path = $url_host . $matches[1][0];
 $url_path = str_replace('\\', '/', $url_path);
 ?>
 
-</div>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,14 +22,16 @@ $url_path = str_replace('\\', '/', $url_path);
 </head>
 
 <body>
-    <section class="repair-section">
-        <div class="container">
-            <div class="text-content col-sm-6">
+<section class="repair-section">
+    <div class="container">
+        <div class="row">
+            
+            <div class="text-content col-md-6">
                 <div class="divider">
                     <div class="logo">
                         <hr>
                         <div class="icon">
-                            <img src="images/maintenance (1).png" alt="icon" style="height: 40px;">
+                            <img src="images/maintenance(1).png" alt="icon" style="height: 40px;">
                         </div>
                         <hr>
                     </div>
@@ -56,7 +57,9 @@ $url_path = str_replace('\\', '/', $url_path);
                     </div>
                 </div>
             </div>
-            <div class="image-content col-sm-6">
+            
+           
+            <div class="image-content col-md-6">
                 <img src="images/1.png" alt="1">
                 <img src="images/2.png" alt="2">
                 <img src="images/3.png" alt="3">
@@ -71,12 +74,11 @@ $url_path = str_replace('\\', '/', $url_path);
                 <img src="images/12.png" alt="12">
                 <img src="images/13.png" alt="13">
                 <img src="images/14.png" alt="14">
-
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
     <script src="js/jquery-2.1.4.min.js"></script>
 </body>
-
 </html>
-</div>
